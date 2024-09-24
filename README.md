@@ -26,11 +26,11 @@ Before running the application, ensure that you have the following installed:
    cd photosapp
    sudo docker-compose up -d
    sudo npm run start:dev
-2. Possible to add .env file
+2. add .env file in the main directory with following variables:
 DATABASE_URI
 ORDERS_API_URL
 PHOTO_API
-PHOTO_TOKEN
+PHOTO_TOKEN - ***required
 
 3. curl  command for testing:
 
@@ -42,8 +42,8 @@ PHOTO_TOKEN
   -H "Content-Type: application/json" \
   -d '{
     "email": "user@example.com",
-    "fullName": "John Doe",
-    "fullAddress": "123 Main St, Springfield",
+    "fullName": "some_name",
+    "fullAddress": "adress",
     "imagesUrls": [
       "https://example.com/image1.jpg",
       "https://example.com/image2.jpg"

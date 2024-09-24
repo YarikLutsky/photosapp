@@ -15,7 +15,7 @@ export class CreateOrderDto {
 
   @IsNotEmpty()
   @IsArray()
-  @IsString({ each: true }) // Validate each item in the array as a string
+  @IsString({ each: true })
   imagesUrls: string[];
 
   @IsNotEmpty()
@@ -24,5 +24,5 @@ export class CreateOrderDto {
 
   @IsNotEmpty()
   @IsString()
-  user: string; // This could be a user ID or username
+  user: string;
 }

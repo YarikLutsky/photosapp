@@ -10,6 +10,6 @@ export default () => ({
     },
     photo: {
         apiUrl: process.env.PHOTO_API || 'https://pixabay.com/api/',
-        token: process.env.PHOTO_TOKEN || '46156757-39b08ad8d0d36a2a9f405daf7',
+        token: process.env.PHOTO_TOKEN || 'your token',
       },
   });
