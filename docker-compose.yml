@@ -1,0 +1,22 @@
+services:
+  mongo:
+    build:
+      context: ./mongodb_replica
+      args:
+        MONGO_VERSION: 5
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: photoapp
+      MONGO_REPLICA_HOST: localhost
+      MONGO_REPLICA_PORT: 27018
+      MONGO_COMMAND: 'mongosh'
+    ports:
+      - '27018:27018'
+    volumes:
+      - mongo_data:/data/db
+    command: --quiet
+    attach: false
+volumes:
+  mongo_data:
+    driver: local
